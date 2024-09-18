@@ -1,3 +1,4 @@
+//code for js
 function f1(){
     window.location.href = 'p2.html';
 }
