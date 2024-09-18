@@ -1,0 +1,236 @@
+<html>
+    <head>
+        <title>
+            Gym F(protein F)
+        </title>
+        <style>
+            .container{
+                width:auto;
+                height:auto;
+                background-color: darkgrey;
+            }
+            #head{
+                height:100px;
+                width:100%;
+                font-size:30px;
+                color:antiquewhite;
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                display:inline-block;
+                background-image: url("R.jpeg");
+            }
+            #home{
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: dotted;
+                font-size: 17px;
+            }
+            #search{
+                display:inline-block;
+                width:100%;
+                padding: 6px 10px;
+                margin-top: 0px;
+                margin-right: 16px;
+                background: #ddd;
+                font-size: 17px;
+                border: none;
+                
+                cursor: pointer;
+                text-align: center;
+                display:inline-block;
+                text-align: center;
+
+            }
+            .search{
+                width:200px;
+                border-radius: 30px;
+            }
+            .search1{
+                cursor:pointer;
+                background-color: grey;
+            }
+            .showcase-box{
+    width:430px;
+    height: 250px;
+    box-shadow: 5px 15px 30px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin:10px 20px 10px 20px;
+    overflow: hidden;
+}
+.showcase-box img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.items{
+    display:inline-block;
+}
+.matter{
+    display:inline-block;
+    text-align: center;
+    margin-left: 30%;
+    color:azure;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+.ok{
+    
+    display: inline-block;
+    width:auto;
+    height:50px;
+}
+.order{
+    border-radius: 15px;
+    background-color:green;
+    color:white;
+    border-color: none;
+    padding:5px;
+    font-weight:lighter;
+    font-family: cursive;
+    cursor: pointer;
+    box-shadow: 2px 2px grey;
+}
+
+.cart{
+    cursor: pointer;
+    border-radius: 15px;
+    background-color:orange;
+    color:black;
+    border-color: none;
+    padding:5px;
+    font-family: cursive;
+    box-shadow: 2px 2px grey;
+}
+.cart:hover{
+    opacity:0.8;
+    height:auto;
+    width:75%;
+}
+.order:hover{
+    opacity:0.8;
+    height:auto;
+    width:75%;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container"> 
+            <div id="head">
+                <header id="head1">
+                    
+                    <pre>
+Alright Buddy:-)
+You are about to taste The Best F 
+                    </pre>
+                </header>
+            </div>
+            
+            <div id="search">
+                <p id="home" onClick="f2()">Home</p>
+                <input type="text" class="search" placeholder="Search for F">
+                <button class="search1">🔍</button>
+            </div>
+            <div class="veriety">
+                <li class="items nv">
+                    
+                   <div class="showcase-box">
+                       <img src="1.jpeg"/>
+                   </div>
+                   <div class="matter">
+                    <h>
+                        Non veg protiens
+                    </h>
+                    <p>
+                        Rs:150/-
+                    </p>
+                    <div class="ok">
+                        <button class="order" onClick="order()">
+                            Order now
+                        </button>
+                        <button class="cart" onClick="cart()">
+                            Add to Cart
+                        </button>
+                    </div><hr>
+                    
+                   </div>
+                        </li>
+                    <li class="items vp">
+                       <div class="showcase-box">
+                           <img src="2.jpeg"/>
+                       </div>
+                       <div class="matter">
+                        <h>
+                            veg protiens
+                        </h>
+                        <p>
+                            Rs:168/-
+                        </p>
+                        <div class="ok vp">
+                            <button class="order" onClick="order()">
+                                Order now
+                            </button>
+                            <button class="cart" onClick="cart()">
+                                Add to Cart
+                            </button>
+                        </div><hr>
+                    </li>
+                    <li class="items bp">
+                       <div class="showcase-box">
+                           <img src="3.jpeg"/>
+                       </div>
+                       <div class="matter">
+                        <h>
+                            Bread & peanut butter
+                        </h>
+                        <p>
+                            Rs:199/-
+                        </p>
+                        <div class="ok bp">
+                            <button class="order" onClick="order()">
+                                Order now
+                            </button>
+                            <button class="cart" onClick="cart()">
+                                Add to Cart
+                            </button>
+                        </div><hr>
+                    </li>    
+                        
+            </div>
+        </div>
+        
+    </body>
+    <script>
+        function ff2(){
+            window.location.href = 'p3.html';
+        }
+        var searchButton = document.querySelector('.search1');
+        searchButton.onclick = function() {
+            var x = document.querySelector('.search').value;
+
+            if (x == "Non veg protiens" || x=="Non" || x=="non" || x=="non veg") {
+                document.querySelector('.vp').remove();
+                document.querySelector('.bp').remove();
+            }
+            else if (x == "veg protiens" || x=="veg" || x=="veg p") {
+                document.querySelector('.nv').remove();
+                // document.querySelector('.bp').remove();
+            }
+            else if(x=="bread" || x=="peanut" || x=="butter" || x=="bread & peanut butter")
+            {
+                document.querySelector('.nv').remove();
+                document.querySelector('.vp').remove();
+            }
+        };
+        function order(){
+            window.location.href='add.html';
+        };
+        function cart()
+        {
+            alert("Cart is Unavailable");
+            
+        };
+    
+    </script>
+</html>

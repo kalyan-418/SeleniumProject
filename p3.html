@@ -1,0 +1,233 @@
+<html>
+    <head>
+        <title>
+            Healthy F
+        </title>
+        <style>
+            .container{
+                width:auto;
+                height:auto;
+                background-color: darkgrey;
+            }
+            #head{
+                height:100px;
+                width:100%;
+                font-size:30px;
+                color:antiquewhite;
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                display:inline-block;
+                background-image: url("R.jpeg");
+            }
+            #home{
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: dotted;
+                font-size: 17px;
+            }
+            #search{
+                display:inline-block;
+                width:100%;
+                padding: 6px 10px;
+                margin-top: 0px;
+                margin-right: 16px;
+                background: #ddd;
+                font-size: 17px;
+                border: none;
+                cursor: pointer;
+                text-align: center;
+                display:inline-block;
+                text-align: center;
+
+            }
+            .searchA{
+                width:200px;
+            }
+            .search11{
+                cursor:pointer;
+                background-color: grey;
+            }
+            .showcase-box{
+    width:430px;
+    height: 250px;
+    box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    margin:0px 20px 10px 20px;
+    overflow: hidden;
+}
+.showcase-box img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.items{
+    display:inline-block;
+}
+.matter{
+    display:inline-block;
+    text-align: center;
+    margin-left: 30%;
+    color:azure;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.ok{
+    
+    display: inline-block;
+    width:auto;
+    height:50px;
+}
+.order{
+    border-radius: 15px;
+    background-color:green;
+    color:white;
+    border-color: none;
+    padding:5px;
+    font-weight:lighter;
+    cursor: pointer;
+    font-family: cursive;
+    box-shadow: 2px 2px grey;
+}
+.cart{
+    cursor: pointer;
+    border-radius: 15px;
+    background-color:orange;
+    color:black;
+    border-color: none;
+    padding:5px;
+    font-family: cursive;
+    box-shadow: 2px 2px grey;
+}
+.cart:hover{
+    opacity:0.8;
+    height:auto;
+    width:75%;
+}
+.order:hover{
+    opacity:0.8;
+    height:auto;
+    width:75%;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container"> 
+            <div id="head">
+                <header id="head1">
+                    
+                    <pre>
+Alright Buddy:-)
+You are about to taste The Best F 
+                    </pre>
+                </header>
+            </div>
+            
+            <div id="search">
+                <p id="home" onClick="f3()">Home</p>
+                <input type="text" class="searchA" placeholder="Search for F">
+                <button class="search11">🔍</button>
+            </div>
+            <div class="veriety">
+                <li class="items cb">
+                    
+                   <div class="showcase-box">
+                       <img src="4.jpeg"/>
+                   </div>
+                   <div class="matter">
+                    <h>
+                        Chicken BIRYANI
+                    </h>
+                    <p id="price">
+                        Rs:150/-
+                    </p>
+                    <div class="ok">
+                        <button class="order" onClick="order()">
+                            Order now
+                        </button>
+                        <button class="cart" onClick="cart()">
+                            Add to Cart
+                        </button>
+                    </div><hr>
+                    
+                   </div>
+                        </li>
+                    <li class="items pbm">
+                       <div class="showcase-box">
+                           <img src="5.jpeg"/>
+                       </div>
+                       <div class="matter">
+                        <h>
+                            Panner Butter Masala
+                        </h>
+                        <p id="price">
+                            Rs:168/-
+                        </p>
+                        <div class="ok">
+                            <button class="order" onClick="order()">
+                                Order now
+                            </button>
+                            <button class="cart" onClick="cart()">
+                                Add to Cart
+                            </button>
+                        </div>
+                    <hr>
+                    </li>
+                    <li class="items bp">
+                       <div class="showcase-box">
+                           <img src="6.jpeg"/>
+                       </div>
+                       <div class="matter">
+                        <h>
+                            Full Meals
+                        </h>
+                        <p id="price">
+                            Rs:99/-
+                        </p>
+                        <div class="ok bp">
+                            <button class="order" onClick="order()">
+                                Order now
+                            </button>
+                            <button class="cart" onClick="cart()">
+                                Add to Cart
+                            </button>
+                        </div><hr>
+                    </li>    
+                        
+            </div>
+        </div>
+        
+    </body>
+    <script>
+        function f3(){
+            window.location.href = 'mine.html';
+        }
+        var searchB = document.querySelector('.search11');
+        searchB.onclick = function() {
+            var y = document.querySelector('.searchA').value;
+            if (y == "BIRYANI" || y=="Biryani" || y=="B" || y=="chicken" || y=="Chicken Biryani" || y=="Chicken") {
+                document.querySelector('.pbm').remove();
+                document.querySelector('.meals').remove();
+            }
+            else if (y == "Panner Butter Masala" || y=="veg" || y=="veg panner" || y=="butter" || y=="Masala") {
+                document.querySelector('.cb').remove();
+                document.querySelector('.meals').remove();
+            }
+            else if(y=="meals" || y=="rice")
+            {
+                document.querySelector('.cb').remove();
+                document.querySelector('.pbm').remove();
+            }
+        };
+        function order(){
+            window.location.href='add.html';
+        };
+        
+        function cart()
+        {
+            alert("Cart is Unavailable");
+            
+        };
+    </script>
+</html>

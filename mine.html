@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <title>
+            HealthyFB.com
+        </title>
+    </head>
+    <style>
+        .container{
+            background-color: black;
+            width: auto;
+            height:auto;
+            position:relative;
+        }
+        .head{
+            width:100%;
+            height:200px;
+            /* background-image: url("R.jpeg"); */
+            background:radial-gradient(orange,blue) ;
+            color:white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+        }
+        #h{
+            font-size: 50px;   
+            text-align: center;
+            display:inline-block;
+            margin-top: 20px;
+            color:white;
+            font-family: cursive;
+        }
+        #pre{
+            font-size: 20px;
+            float: right;
+            display:inline-block;
+            margin-right: 10px; 
+        }
+        #pree{
+            font-size: 50px;
+            font-weight: 200;
+            color:greenyellow;
+            text-shadow: 2px 2px black;
+            font-family: cursive;
+        }
+        .quote{
+            text-align: center;
+            font-size: 20px;
+            color:yellow;
+            text-shadow:3px 1px black;
+        }
+        .location{
+            align-items:center ;
+            margin-left:40%;
+            margin-bottom: 30px;
+        }
+        #location{
+            width:300px;
+        }
+        #area{
+
+            color: bisque;
+        }
+        #t{
+            color:yellowgreen
+        }
+        #gymf,#HF,#tif{
+            height:100px;
+            width:100px;
+            
+            
+        }
+        .buttons{
+            position:relative
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .b1{
+            background-color:bisque;
+            padding:10px;
+            border-radius: 10px;
+            color:black solid;
+            font-family: cursive;
+            margin-bottom: 10px;
+            margin-left: 15%;
+            cursor: pointer;
+        }
+        .b1:hover{
+            opacity:0.8;
+        }
+        .b2{
+            background-color:darkgray;
+            padding:10px;
+            color: black solid;
+            border-radius: 10px;
+            color:black solid;
+            font-family: cursive;
+            margin-bottom: 10px;
+            margin-left: 15%;
+            cursor: pointer;
+        }
+        .b3{
+            background-color:darksalmon;
+            padding:10px;
+            color: black solid;
+            border-radius: 10px;
+            color:black solid;
+            font-family: cursive;
+            margin-left: 15%;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .b2:hover{
+            opacity:0.8;
+        }
+        .b3:hover{
+            opacity:0.8;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="head">
+                
+                    <header id="h">
+                        Welcome to <pre ID="pree">HEALTHY FOOD BUS
+                        </pre>
+                        
+                    </header>
+                    <p id="pre">
+                        👤 Kalyan K<br>
+                        📞 8125534886
+                    </p>             
+                
+            </div>
+            <div class="quote">
+                <h><br>
+                    Thank You For selecting HealthFB to fill your stumock!!!!
+                    <br>Enjoy the day with HFB🥰  
+                </h><br><br><br>
+                <img id="img" src="download.jpeg";>
+            </div><br><br>
+            <div class="location">
+                <label id="area">
+                    Select Your Area here👇
+                </label><br>
+                <select type="text" id="location" onchange='func()'>
+                    <option value="" disabled selected>Select your location</option> -->
+                    <option value="Choose">Choose</option>
+                    <option value="ghatkesar">ghatkesar</option>
+                    <option value="Jodimetla">Jodimetla</option>
+                    <option value="medipally">medipally</option>
+                    <option value="peerzadiguda">peerzadiguda</option>
+                    <option value="uppal x">uppal x</option>
+                </select> Note:available in only one area at one time.
+                <p id="t">Note:available in only one area at one time.</p>
+            </div>
+            <div class="buttons">
+                <!-- <div class="b1"> -->
+                <button class="b1" id="b1" onClick="f1()">
+                    Gym F(protein F)💪
+                </button>
+                    <!-- <img id="gymf" src="meal-prep-pic--e1515372580439.jpg">     -->
+                <!-- </div> -->
+                <!-- <div class="b2"> -->
+                <button class="b2" id="b2" onClick="ff2()">
+                    Healthy Food(All types)🍛🍚🍗
+                </button>
+                    <!-- <img id="HF" src="OIP.jpeg">     -->
+                <!-- </div> -->
+                <!-- <div class="b3"> -->
+                <button class="b3" id="b3" onClick="f3()">
+                    Tiffins 
+                </button>
+                    <!-- <img id="tif" src="download (2).jpeg">     -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </body>
+    <script src="mine.js">    
+    </script>
+
+</html>

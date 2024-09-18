@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <style>
+            .nav{
+                /* background-color:Black ; */
+                background:linear-gradient(black,white,black);
+                overflow: hidden;
+                
+            }
+            ul{
+                list-style-type: none;
+                border-radius:white;
+                z-index: 1;
+                position: relative;
+                bottom:5px;
+
+            }
+            li{
+                float:left;
+                padding:25px;
+                text-align: center;
+                border: 1px solid black;
+                border-radius: 10px;
+
+            }
+            li:hover{
+                background-color: grey;
+                cursor:pointer;
+                transition: .5s;
+            }
+            h{
+                font-size:50px;
+                width:100%;
+                margin-left:40% ;
+                /* position: fixed; */
+                z-index: 2;
+                color: white;
+
+            }
+            .paraallax{
+                font-size: 50px;
+                height: 200px;
+                background-image: url('1.jpeg');
+
+  /* Full height */
+                height: 100%; 
+
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            }
+            .logout{
+                float:right;
+            }
+            @media(max-width: 600px){
+                li{
+                    float:none;
+                    text-align: center;
+                }
+                .logout{
+                float:none;
+            }   
+            }
+            div{
+                height: 200px;
+            }
+            .div2{
+                background-color: aqua;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h>Welcome</h>
+
+        <nav class="nav">
+            
+            <ul>
+                <li><a href="Home">Home</a></li>
+            <li><a href="Items">Items</a></li>
+            <li class="logout"><a href="logout">Logout</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+            
+        </nav>
+        <div class="paraallax">HLoo</h1></div>
+        <div class="div2"></div>
+    </body>
+</html>

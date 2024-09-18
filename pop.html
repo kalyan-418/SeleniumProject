@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>
+            Confirmed 
+        </title>
+        <style>
+            .popup{
+            /* visibility: hidden; */
+            width:100%;
+            position: absolute;    
+            align-items: center;
+            justify-items: center;
+            text-align:center;
+            top:1px;
+            /* margin-top:50%; */
+            backdrop-filter: blur(100px);
+            /* margin-top: -100px; */
+            }
+            /* .btn{
+  background-color:var(--background-color);
+  margin:50px 50px;
+  padding:10px;
+  border:none;
+  outline:none;
+  position:relative;
+  width:100px;
+  border-radius: 20px;
+  cursor:pointer;
+  --background-color:orange;
+  --border-size:2px;
+  --accent-color:green;
+}
+.btn_2::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:-1;
+  background-color:var(--accent-color);
+  transform:ScaleX(0);
+  transition:transform 100ms ease-in-out;
+  transform-origin:left;
+}
+
+.btn_2:hover::before,
+.btn_2:focus::before{
+  transform:ScaleX(1);
+}
+
+.btn_2{
+  z-index:1;
+} */
+            .btn{
+                background-color: greenyellow;
+                padding: 10px;
+                width:100px;
+                border-radius: 20px;
+                color: black;
+                font-weight: bolder;
+                cursor:pointer;
+                animation-name: ok;
+                animation-duration: 5s;
+                
+            }
+            @keyframes ok {
+                0%   {background-color:white;width:20%; transition: .5s;}
+                25%  {background-color: greenyellow;width:40px;transition: .5s;}
+                50%  {background-color: paleturquoise;width:60px;transition: .5s;}
+                75% {background-color:darkmagenta;width:80px;transition: .5s;}
+                100% {background-color:greenyellow;width:100px;transition: .5s;}
+                75% {background-color:darkmagenta;width:80px;transition: .5s;}
+                50%  {background-color: paleturquoise;width:60px;transition: .5s;}
+                25%  {background-color: greenyellow;width:40px;transition: .5s;}
+                0%   {background-color:white;width:20%; transition: .5s;}
+
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="popup" id="OK1">
+            <img src="download.jpeg">
+            <h1>Confirmed</h1>
+            <h1>THANK YOU</h1>
+            <p>Visit Again!</p>
+            <button type="submit" class="btn btn_2"  onclick= "closepop()" >OK</button>
+        </div>
+
+    </body>
+    <script>
+
+        function closepop(){
+            let x=document.querySelector("#OK1");
+            x.classList.add("close");
+            window.location.href='mine.html';
+        }
+    </script>
+</html>

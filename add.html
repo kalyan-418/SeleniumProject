@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>confirm order
+        </title>
+    </head>
+    <style>
+        form{
+            width:100%;
+            height:auto;
+            text-align: center;
+        }
+        .btn{
+            background-color: greenyellow;
+            border:none;
+            border-radius: 5px;
+            box-shadow: 2px 2px;
+            cursor:pointer;
+        }
+        .btn:hover{
+            opacity:0.8;
+            width:100px;
+            height:40px;
+
+        }
+    </style>
+    <body>
+        <form class="form1">
+            <label>Enter your address</label>
+            <input type="text" id="add"><br><br>
+            select payment method
+            <select type="text" id="payment" onchange="fun1()"><p></p>
+                <option value="" disabled selected>Select a payment method</option>
+                <option value="cash on delivery">Cash on Delivery</option>
+                <option value="upi">upi</option>
+            </select><br><br>
+            <button class="btn" onClick="fun2(event)">Confirm order</button>
+        </form>
+    </body>
+    <script >
+        // let p=document.querySelector(".btn");
+        function fun1(){
+            let selectElement = document.querySelector('#payment');
+            let output = selectElement.value;
+            if(output == 'upi') {
+                alert("Please select other payment method UPI not working");
+            }   
+        };
+        function fun2(event){
+            event.preventDefault();
+            let selectadd = document.querySelector('#add').value;    
+            let op = selectadd.length;
+            if(op<=5){
+                alert("Enter correct address");
+            }
+            else{
+                alert("Confirmed");
+                window.location.href = 'pop.html';
+                
+            }
+            
+
+        };
+        
+
+    </script>
+</html>
